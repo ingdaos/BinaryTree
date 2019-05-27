@@ -6,15 +6,25 @@ Para iniciar la aplicación y/o ejecutar las pruebas unitarias es necesario conta
 
 ## Configuración
 Al ser una aplicación Spring Boot se pueden configurar los parámetros ubicados en el archivo application.properties ubicado en la carpeta config.
+
+BinaryTree
+    +---templates
+        +---Config
+		    +---application.properties
+
 Para una configuración rápida solo es necesario validar que el puerto de la aplicación (8443 - Valor configurado en la rama master) esté disponible en la maquina donde se va a iniciar el proyecto o correr los test. Si no se encuentra disponible es posible ajustar el puerto en la propiedad “server.port”.
 
 ## Iniciar el proyecto
 Para iniciar la aplicación Spring Boot o ejecutar las pruebas JUnit es necesario clonar el proyecto de la rama master.
 Una vez clonado el servicio es posible preparar la aplicación para iniciarla mediante el siguiente comando:
+
 	mvn clean install –DskipTests
+
 Para iniciar la aplicación basta con ejecutar:
+
 	java -jar target/BinaryTree-1.0-SNAPSHOT.jar
-NOTA: Todos los comandos anteriormente mencionados deben ser ejecutados desde la ubicación raíz del proyecto clonado.
+
+NOTA: Todos los comandos anteriormente mencionados deben ser ejecutados desde la ubicación raíz del proyecto clonado (/BinaryTree)
 
 ### Ejecutar pruebas
 El proyecto cuenta con la clase TreeServiceTest la cual se encarga de crear un árbol binario y probar el cálculo de ancestros comunes.
